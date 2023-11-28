@@ -6,6 +6,7 @@
 * inheritance, interfaces, information hiding, and polymorphism.
 *
 * */
+
 import java.io.IOException;
 
 public class Main {
@@ -13,7 +14,7 @@ public class Main {
 
         IdAndPasswords idandPasswords = new IdAndPasswords();
 
-        LoginPage loginPage = new LoginPage(idandPasswords.getLoginInfo());
+        new LoginPage(idandPasswords.getLoginInfo());
 
         System.out.println("It worked!");
     }

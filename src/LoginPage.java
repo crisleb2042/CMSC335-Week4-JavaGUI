@@ -10,7 +10,6 @@ import java.util.HashMap;
 
 public class LoginPage implements ActionListener {
 
-
     private final ImageIcon icon;
 
     private final BufferedImage myPicture;
@@ -36,7 +35,7 @@ public class LoginPage implements ActionListener {
     //Constructor for LoginPage needs HashMap values for <String,String>
     LoginPage(HashMap<String, String> loginInfoOriginal) throws IOException {
 
-        // Declares Constructor argument HashMap as variable;
+        // Declares Constructor argument HashMap as variable
         loginInfo = loginInfoOriginal;
 
         // .read method returns BufferedImage from .getResource path
@@ -61,20 +60,20 @@ public class LoginPage implements ActionListener {
 
         logoLabel.setIcon(icon);
         logoLabel.setBounds(-1,-1,400,400);
-        logoLabel.setHorizontalAlignment(JLabel.CENTER);
-        logoLabel.setVerticalAlignment(JLabel.CENTER);
+        logoLabel.setHorizontalAlignment(SwingConstants.CENTER);
+        logoLabel.setVerticalAlignment(SwingConstants.CENTER);
 
         header.setFont(new Font(null, Font.BOLD, 25));
         header.setBounds(50, 100, 300,30);
-        header.setHorizontalAlignment(JLabel.CENTER);
+        header.setHorizontalAlignment(SwingConstants.CENTER);
 
         notes.setFont(new Font(null, Font.BOLD, 9));
         notes.setBounds(50, 125, 300,30);
-        notes.setHorizontalAlignment(JLabel.CENTER);
+        notes.setHorizontalAlignment(SwingConstants.CENTER);
 
         notes2.setFont(new Font(null, Font.BOLD, 9));
         notes2.setBounds(50, 150, 300,30);
-        notes2.setHorizontalAlignment(JLabel.CENTER);
+        notes2.setHorizontalAlignment(SwingConstants.CENTER);
 
         panel.setLayout(null);
         panel.setBounds(385,-1,400,600);
@@ -97,7 +96,7 @@ public class LoginPage implements ActionListener {
         frame.add(resetButton);
 
         // Frame properties
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         //frame.setLocationRelativeTo(null);  // centers the frame on screen
         frame.setSize(800,500);
         frame.setLayout(null);
@@ -127,7 +126,7 @@ public class LoginPage implements ActionListener {
                     messageLabel.setText("Login Successful");
                     frame.dispose();
                     try {
-                        Portal welcomepage = new Portal();
+                        new Portal();
                     } catch (IOException ex) {
                         throw new RuntimeException(ex);
                     }
